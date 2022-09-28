@@ -1,7 +1,12 @@
 import "./App.css";
+import Navbar from "./Component/Navbar";
+import AllRoutes from "./Pages/AllRoutes";
 
 function App() {
-  return <div className="App"></div>;
+  return <div className="App">
+    <Navbar />
+    <AllRoutes />
+  </div>;
 }
 
 export default App;

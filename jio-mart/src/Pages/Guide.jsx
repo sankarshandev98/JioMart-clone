@@ -1,7 +1,10 @@
 import React from 'react'
 
-export const Guide = () => {
+const Guide = () => {
   return (
     <div>Guide</div>
   )
 }
+
+export default Guide;
+
