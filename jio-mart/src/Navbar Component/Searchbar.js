@@ -7,9 +7,8 @@ function Searchbar() {
         <div>
             <input className={nav.Searchbar}
                 type="search"
-                placeholder="Search essentials, groceries, and more ..." / ><span>
-                <faIcons.FaListUl className={nav.listui}/>
-            </span>
+                placeholder="Search essentials, groceries, and more ..." />
+            <faIcons.FaListUl className={nav.FaListUl}/>
         </div>
     )
 }
