@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
+import nav from "./Navbar.module.css";
+import Searchbar from './Searchbar';
+
 
 const Navbar = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -10,10 +13,12 @@ const Navbar = () => {
     }
     return (
         <>
-            <div className='navbar'>
+            <div className={nav.navbar}>
                 <Link to="/" className='menu-bars'>
-                    <AiIcons.AiOutlineMenu onClick={showSidebar} />
+                    <AiIcons.AiOutlineMenu className={nav.nav_toggle} onClick={showSidebar} />
                 </Link>
+                <img className={nav.main_logo} src='https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg'/>
+                <Searchbar/>
             </div>
             <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                 <ul className='nav-menu-items'>
@@ -36,7 +41,5 @@ const Navbar = () => {
         </>
     )
 }
-
-// 13.31
 
 export default Navbar;

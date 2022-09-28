@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #008ecc;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.main_logo {
+  width: 118px;
+  height: 118px;
+}
+.nav_toggle {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+.Searchbar {
+  width: 720px;
+  background-color: white;
+  border: transparent;
+  border-radius: 3px;
+  height: 40px;
+}
