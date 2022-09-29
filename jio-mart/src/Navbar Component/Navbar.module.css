@@ -50,6 +50,8 @@
 }
 .cart_img {
   color: white;
+  width: 20px;
+  height: 20px;
 }
 .outline_logo {
   color: white;
@@ -83,5 +85,34 @@
   background: transparent;
   height: 30px;
   border: 1px solid white;
+  color: white;
+}
+.search_div {
+  width: 56%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loginDiv {
+  width: 10.5%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+}
+.userLogo {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.cartDiv {
+  width: 4.5%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
 }
