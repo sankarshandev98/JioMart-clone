@@ -17,17 +17,17 @@ const AllRoutes = () => {
         <>
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/about-us' element={< Aboutus />} />
-                <Route path='/all-offers' element={< Alloffers />} />
-                <Route path='/go-green' element={< Gogreen />} />
-                <Route path='/guide' element={< Guide />} />
-                <Route path='/jiomart-gift-card' element={< Jiomart_gift_card />} />
-                <Route path='/jiomart-gift-store' element={< Jiomart_gift_store />} />
-                <Route path='/jiomart-wallet' element={< Jio_mart_wallet />} />
-                <Route path='/my-list' element={< My_list />} />
                 <Route path='/shop-by-category' element={< Shop_by_Category />} />
+                <Route path='/my-list' element={< My_list />} />
+                <Route path='/jiomart-wallet' element={< Jio_mart_wallet />} />
+                <Route path='/jiomart-gift-store' element={< Jiomart_gift_store />} />
+                <Route path='/jiomart-gift-card' element={< Jiomart_gift_card />} />
+                <Route path='/go-green' element={< Gogreen />} />
+                <Route path='/all-offers' element={< Alloffers />} />
                 <Route path='/my-account' element={< My_account />} />
                 <Route path='/need-help' element={<Need_help />} />
+                <Route path='/about-us' element={< Aboutus />} />
+                <Route path='/guide' element={< Guide />} />
             </Routes>
         </>
     )
