@@ -2,7 +2,7 @@ import React from 'react'
 
 const Jio_mart_wallet = () => {
   return (
-    <div>Jio_mart_wallet</div>
+    <div>Jio mart wallet</div>
   )
 }
 

@@ -5,43 +5,8 @@ export const SidebarData = [
         cName: "nav-text"
     },
     {
-        title: "About us",
-        path: "/about-us",
-        cName: "nav-text"
-    },
-    {
-        title: "All Offers",
-        path: "/all-offers",
-        cName: "nav-text"
-    },
-    {
-        title: "Go Green",
-        path: "/go-green",
-        cName: "nav-text"
-    },
-    {
-        title: "Guide",
-        path: "/guide",
-        cName: "nav-text"
-    },
-    {
-        title: "JioMart Wallet",
-        path: "/jiomart-wallet",
-        cName: "nav-text"
-    },
-    {
-        title: "JioMart Giftcard",
-        path: "/jiomart-giftcard",
-        cName: "nav-text"
-    },
-    {
-        title: "JioMart Giftstore",
-        path: "/JioMart-giftstore",
-        cName: "nav-text"
-    },
-    {
-        title: "My Account",
-        path: "/my-account",
+        title: "Shop By Category",
+        path: "/shop-by-category",
         cName: "nav-text"
     },
     {
@@ -50,13 +15,48 @@ export const SidebarData = [
         cName: "nav-text"
     },
     {
+        title: "JioMart Wallet",
+        path: "/jiomart-wallet",
+        cName: "nav-text"
+    },
+    {
+        title: "JioMart Gift Store",
+        path: "/JioMart-giftstore",
+        cName: "nav-text"
+    },
+    {
+        title: "JioMart Gift Card",
+        path: "/jiomart-giftcard",
+        cName: "nav-text"
+    },
+    {
+        title: "GoGreen with JioMart",
+        path: "/go-green",
+        cName: "nav-text"
+    },
+    {
+        title: "All Offers",
+        path: "/all-offers",
+        cName: "nav-text"
+    },
+    {
+        title: "My Account",
+        path: "/my-account",
+        cName: "nav-text"
+    },
+    {
         title: "Need Help",
         path: "/need-help",
         cName: "nav-text"
     },
     {
-        title: "Shop By Category",
-        path: "/shop-by-category",
+        title: "About us",
+        path: "/about-us",
+        cName: "nav-text"
+    },
+    {
+        title: "Guide",
+        path: "/guide",
         cName: "nav-text"
     },
 ]

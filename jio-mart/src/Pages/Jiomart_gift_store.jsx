@@ -2,7 +2,7 @@ import React from 'react'
 
 const Jiomart_gift_store = () => {
   return (
-    <div>Jiomart_gift_store</div>
+    <div>Jiomart gift store</div>
   )
 }
 
