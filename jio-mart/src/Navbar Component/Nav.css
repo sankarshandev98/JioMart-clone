@@ -19,8 +19,9 @@
   justify-content: start;
   align-items: center;
   list-style: none;
-  height: 40px;
+  height: 36px;
   font-family: sans-serif;
+  margin-left: -25px;
 }
 
 .nav-text a {

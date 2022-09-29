@@ -21,12 +21,12 @@ export const SidebarData = [
     },
     {
         title: "JioMart Gift Store",
-        path: "/JioMart-giftstore",
+        path: "/jioMart-gift-store",
         cName: "nav-text"
     },
     {
         title: "JioMart Gift Card",
-        path: "/jiomart-giftcard",
+        path: "/jiomart-gift-card",
         cName: "nav-text"
     },
     {
