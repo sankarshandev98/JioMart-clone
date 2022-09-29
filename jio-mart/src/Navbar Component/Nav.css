@@ -8,7 +8,6 @@
   top: 0;
   left: -100%;
   transition: 850ms;
-  border: 1px solid black;
 }
 
 .nav-menu.active {

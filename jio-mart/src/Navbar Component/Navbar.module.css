@@ -26,10 +26,10 @@
 
 .navbar_toggle {
   background-color: #008ecc;
-  width: 100%;
+  width: 115%;
   height: 90px;
   display: flex;
-  border: 1px solid black;
+  margin-left: -40px;
 }
 
 .main_logo {
@@ -64,7 +64,7 @@
   margin-left: 5px;
   margin-top: 2px;
 }
-.userCircle{
+.userCircle {
   width: 25px;
   height: 25px;
 }
