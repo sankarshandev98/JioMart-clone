@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import * as AiIcons from 'react-icons/ai';
-import * as faIcons from 'react-icons/fa';
 import { SidebarData } from './SidebarData';
 import styles from "./Navbar.module.css";
 import Searchbar from './Searchbar';
 import Login_signup from './Login_signup';
 import Cart from './Cart';
 import "./Nav.css";
+import SidebarLogin from './SidebarLogin';
 
 const Navbar = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
         <>
             <div className={styles.navbar}>
                 <Link to="#" className={styles.menu_bars}>
-                    <AiIcons.AiOutlineMenu onClick={showSidebar} />
+                    <AiIcons.AiOutlineMenu className={styles.outline_logo} onClick={showSidebar} />
                 </Link>
                 <img className={styles.main_logo} src='https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg' />
                 <Searchbar />
@@ -27,11 +27,7 @@ const Navbar = () => {
             </div>
             <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                 <ul className={styles.nav_menu_items} onClick={showSidebar}>
-                    <li className={styles.navbar_toggle}>
-                        <Link to="#" className={styles.menu_bars}>
-                            <AiIcons.AiOutlineClose />
-                        </Link>
-                    </li>
+                    <SidebarLogin />
                     {SidebarData.map((item, index) => {
                         return (
                             <li key={index} className={item.cName}>

@@ -1,10 +1,11 @@
 import React from 'react'
 import * as faIcons from 'react-icons/fa';
+import styles from "./Navbar.module.css";
 
 function Cart() {
     return (
         <div>
-            <faIcons.FaShoppingCart /><span>Cart</span>
+            <faIcons.FaShoppingCart className={styles.cart_img}/><span>Cart</span>
         </div>
     )
 }

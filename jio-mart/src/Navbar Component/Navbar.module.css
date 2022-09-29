@@ -1,37 +1,40 @@
+* {
+  font-family: sans-serif;
+}
 .navbar {
   background-color: #008ecc;
+  margin: auto;
   width: 100%;
   height: 70px;
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
   align-items: center;
+  margin-top: -8px;
 }
 .menu_bars {
-  margin-left: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: none;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav_menu_items {
   width: 100%;
+  margin-top: -0px;
 }
 
 .navbar_toggle {
-  background-color: #060b26;
+  background-color: #008ecc;
   width: 100%;
-  height: 80px;
+  height: 90px;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  border: 1px solid black;
 }
 
 .main_logo {
   width: 118px;
   height: 118px;
-}
-.nav_toggle {
-  width: 30px;
-  height: 30px;
-  color: white;
 }
 .Searchbar {
   width: 720px;
@@ -43,4 +46,41 @@
 .FaListUl {
   width: 20px;
   height: 20px;
+}
+.cart_img {
+  color: white;
+}
+.outline_logo {
+  color: white;
+}
+.aiHello {
+  width: 48%;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  color: white;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.userCircle{
+  width: 25px;
+  height: 25px;
+}
+.sidebar_buttons {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -16px;
+  margin-top: 5px;
+}
+.sidebar_buttons > button {
+  width: 147px;
+  background: transparent;
+  height: 30px;
+  border: 1px solid white;
+  color: white;
 }

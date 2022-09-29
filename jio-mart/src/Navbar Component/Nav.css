@@ -1,13 +1,14 @@
 .nav-menu {
-  background-color: #060b26;
-  width: 250px;
+  background-color: white;
+  width: 320px;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   position: fixed;
   top: 0;
   left: -100%;
   transition: 850ms;
+  border: 1px solid black;
 }
 
 .nav-menu.active {
@@ -18,23 +19,16 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 8px 0px 8px 16px;
   list-style: none;
-  height: 60px;
+  height: 40px;
+  font-family: sans-serif;
 }
 
 .nav-text a {
   text-decoration: none;
-  color: #f5f5f5;
-  font-size: 18px;
-  width: 95%;
+  color: black;
+  font-size: 15px;
   height: 100%;
   display: flex;
-  align-items: center;
-  padding: 0 16px;
   border-radius: 4px;
-}
-
-.nav-text a:hover {
-  background-color: #1a83ff;
 }
