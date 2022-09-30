@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 import style from './Footer.module.css';
 
-export function Footer1() {
+export default function Footer1() {
   const Footer = styled.div`
     display: flex;
     justify-content: space-around;
@@ -70,17 +69,17 @@ export function Footer1() {
             </li>
           </ul>
           <div className={style.apps}>
-          <p className={style.footerHead}>DOWNLOAD APP</p>
-              <img
-                style={{paddingRight:'10px',paddingBottom:'10px'}}
-                src='https://www.jiomart.com/images/cms/wysiwyg/app-icons/play_store.png'
-                alt=''
-              />
-              <img
-              style={{paddingBottom:'10px'}}
-                src='https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png'
-                alt=''
-              />
+            <p className={style.footerHead}>DOWNLOAD APP</p>
+            <img
+              style={{ paddingRight: '10px', paddingBottom: '10px' }}
+              src='https://www.jiomart.com/images/cms/wysiwyg/app-icons/play_store.png'
+              alt=''
+            />
+            <img
+              style={{ paddingBottom: '10px' }}
+              src='https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png'
+              alt=''
+            />
           </div>
         </div>
       </Footer>
