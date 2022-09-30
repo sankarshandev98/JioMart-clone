@@ -1,41 +1,135 @@
 export const menuItemsData = [{
-    title: "Home",
+    title: "Groceries",
+    submenu: [{
+        title: "Fruits & Vegetables",
+    },
+    {
+        title: "Diary & Bakery",
+    },
+    {
+        title: "Staples",
+    },
+    {
+        title: "Snacks & Branded Foods",
+    },
+    {
+        title: "Beverages",
+    },
+    {
+        title: "Personal Care",
+    }],
 },
 {
-    title: "Services",
+    title: "Premium Fruits",
     submenu: [{
-        title: "web design",
+        title: "Apples & Pears",
     },
     {
-        title: "web development",
-        submenu: [{
-            title: "Frontend",
-        },
-        {
-            title: "Backend",
-            submenu: [{
-                title: "NodeJS",
-            },
-            {
-                title: "PHP",
-            },
-            ],
-        },
-        ],
+        title: "Avocado, Peach, Plum",
     },
     {
-        title: "SEO",
+        title: "Banana, Melons, & Coconut",
+    },
+    {
+        title: "Cherries, Berries & Exotic",
+    },
+    {
+        title: "Fruits",
+    },
+    {
+        title: "Citrus, Mango & Grapes",
+    }],
+},
+{
+    title: "Home & Kitchen",
+    submenu: [{
+        title: "KitchenWare",
+    },
+    {
+        title: "Dining",
+    },
+    {
+        title: "Furnishing",
+    },
+    {
+        title: "Home Decor",
+    },
+    {
+        title: "Furniture",
+    },
+    {
+        title: "Home Appliances",
     },
     ],
 },
 {
-    title: "About",
+    title: "Fashion",
     submenu: [{
-        title: "Who we are",
+        title: "Men",
     },
     {
-        title: "Our values",
+        title: "Women",
+    },
+    {
+        title: "Boys",
+    },
+    {
+        title: "Girls",
+    },
+    {
+        title: "Infants",
+    }],
+},
+{
+    title: "Electronics",
+    submenu: [{
+        title: "Mobiles & Tablets",
+    },
+    {
+        title: "TV & Speaker",
+    },
+    {
+        title: "Home Appliances",
+    },
+    {
+        title: "Computers",
+    },
+    {
+        title: "Cameras",
+    },
+    {
+        title: "Kitchen Appliances",
     },
     ],
 },
+{
+    title: "Beauty",
+    submenu: [{
+        title: "Make-Up",
+    },
+    {
+        title: "Hair",
+    },
+    {
+        title: "Skin Care",
+    },
+    {
+        title: "Fragrances",
+    },
+    {
+        title: "Personal Care",
+    },
+    {
+        title: "Mom & Baby",
+    }],
+},
+{
+    title: "Jewellery",
+    submenu: [{
+        title: "Fine Jewellery",
+    },
+    {
+        title: "Jewellery",
+    }],
+}
 ];
