@@ -1,0 +1,48 @@
+.colllapseContainer{
+font-family: jioLight;
+width: 250px;
+}
+.colllapseContainer a{
+    color:black
+}
+.colllapseContainer ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.colllapseContainer li{
+opacity: 0.75;
+}
+.colllapseContainer li:hover{
+opacity: 1;
+}
+.colllapseContainer h1{
+    text-align:left;
+     font-size:20px;
+     margin: 0.7em 0 0.1em 0;
+
+}
+hr{
+    display: none 
+}
+.colllapseContainer a{
+    color: #008ecc;
+    text-decoration: none;
+}
+.sideCatBarHeader{
+    display:inline-block;
+    opacity: 0.75;
+
+}
+.sideCatBarHeader:hover{
+    display:inline-block;
+    opacity:1;
+
+}
+@media only screen and (max-width:600px) {
+    .colllapseContainer{
+        width: 100%
+        }
+        
+    
+}
