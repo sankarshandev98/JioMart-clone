@@ -1,10 +1,10 @@
 import { menuItemsData } from "./menuItemsData";
 import MenuItems from "./MenuItems";
-import drop from "./Dropdown.module.css";
+import "./Dropdown.css";
 const Nav = () => {
     return (
         <nav>
-            <ul className={drop.menus}>
+            <ul className="menus">
                 {
                     menuItemsData.map((menu, index) => {
                         const depthLevel = 0;
