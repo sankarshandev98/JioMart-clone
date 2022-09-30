@@ -1,0 +1,45 @@
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 700ms ease;
+}
+
+.searchBar li {
+  opacity: 0.8;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+}
+.searchBar a {
+  color: black;
+}
+
+.searchBar li:nth-last-of-type(1) {
+  border-bottom: 0px solid black;
+}
+.searchBar li:hover {
+  opacity: 1;
+  border-bottom: 1px solid #008ecc;
+  cursor: pointer;
+}
+.searchBar ul {
+  list-style-type: none;
+  padding: 0 10px;
+  margin: 0;
+  transition: 700ms ease;
+
+  max-height: 55vh;
+  overflow: auto;
+}
+
+.searchSuggest {
+  position: absolute;
+  background: white;
+  z-index: 2;
+  color: black;
+  top: 40px;
+  justify-self: stretch;
+  width: 100%;
+  transition: 700ms ease;
+  box-shadow: 0 4px 6px 1.5px rgba(11, 121, 211, 0.432);
+}

@@ -1,0 +1,65 @@
+.MainLogin {
+  margin: 3%;
+  padding: 2%;
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'c c';
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2%;
+  background: white;
+  border-radius: 4%;
+}
+.MainLogin > div:nth-of-type(1) {
+  grid-area: a;
+}
+.MainLogin > div:nth-of-type(2) {
+  grid-area: b;
+}
+.MainLogin > div:nth-of-type(3) {
+  grid-area: c;
+}
+.MainLogin img {
+  width: 100%;
+  height: auto;
+}
+
+.loginInput > input {
+  width: 100%;
+  border: 0.5px solid rgba(0, 0, 0, 0.274);
+  outline: none;
+}
+.MainLogin > div > button {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(0, 142, 204);
+  font-size: 22px;
+  padding: 5px;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  margin: 30px 0 0 100px;
+}
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .MainLogin {
+    grid-template-areas:
+    'a'
+      'b'
+      'c';
+    justify-items: center;
+  }
+  .MainLogin img {
+    width: 50%;
+    height: auto;
+  }
+  .MainLogin > div:nth-of-type(1) {
+    display: none;
+  }
+  
+}

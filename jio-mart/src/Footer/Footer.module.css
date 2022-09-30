@@ -1,0 +1,25 @@
+.mainFooter {
+  background-color: rgb(237, 237, 239);
+  max-width: 100vw;
+  margin-top: 2%;
+  padding: 3%;
+}
+.mainFooter ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: jioLight;
+}
+.footerHead {
+  font-size: 12px;
+  font-family: jioBold;
+}
+.apps {
+  padding-top: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .infoBox:nth-of-type(1) {
+    display: none;
+  }
+}
