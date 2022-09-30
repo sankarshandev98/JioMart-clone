@@ -1,0 +1,10 @@
+  .slick-slider{
+    width: 95%;
+    margin: auto;
+  }
+.sliderthree{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
