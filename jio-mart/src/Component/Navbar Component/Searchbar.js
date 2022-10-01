@@ -1,5 +1,4 @@
 import React from 'react'
-import nav from "./Navbar.module.css";
 import * as faIcons from 'react-icons/fa';
 import styles from "./Navbar.module.css";
 
