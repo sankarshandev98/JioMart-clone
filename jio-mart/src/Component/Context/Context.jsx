@@ -1,4 +1,5 @@
 import { createContext, useContext, useReducer } from "react";
+import { cartReducer, productReducer } from "./Reducers";
 const Cart = createContext();
 const Context = ({ children }) => {
   const data = [
@@ -9,13 +10,13 @@ const Context = ({ children }) => {
       "cost": 30,
       "mrp": 38,
       "id": 1,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 5,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Sprite 600 ml",
@@ -24,13 +25,13 @@ const Context = ({ children }) => {
       "cost": 30,
       "mrp": 38,
       "id": 2,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 14,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Thums Up 1.25 L",
@@ -39,13 +40,13 @@ const Context = ({ children }) => {
       "cost": 60.45,
       "mrp": 65,
       "id": 3,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 5,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Monster Energy Drink 350 ml (Can)",
@@ -54,13 +55,13 @@ const Context = ({ children }) => {
       "cost": 82.5,
       "mrp": 110,
       "id": 4,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 22,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Coca Cola 300 ml (Can)",
@@ -69,13 +70,13 @@ const Context = ({ children }) => {
       "cost": 37.2,
       "mrp": 40,
       "id": 5,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 9,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Thums Up 300 ml (Can)",
@@ -84,13 +85,13 @@ const Context = ({ children }) => {
       "cost": 33.48,
       "mrp": 36,
       "id": 6,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 5,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Thums Up 250 ml",
@@ -99,13 +100,13 @@ const Context = ({ children }) => {
       "cost": 18.6,
       "mrp": 20,
       "id": 7,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 5,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Sprite 300 ml (Can)",
@@ -114,13 +115,13 @@ const Context = ({ children }) => {
       "cost": 37.2,
       "mrp": 40,
       "id": 8,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 14,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Coca Cola 250 ml",
@@ -129,13 +130,13 @@ const Context = ({ children }) => {
       "cost": 18.6,
       "mrp": 20,
       "id": 9,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 9,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Fanta Orange 300 ml",
@@ -144,13 +145,13 @@ const Context = ({ children }) => {
       "cost": 37.2,
       "mrp": 40,
       "id": 10,
-      "inStock": "no",
+      "inStock": true,
       "brand": 17,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Pepsi 2 L",
@@ -159,13 +160,13 @@ const Context = ({ children }) => {
       "cost": 60,
       "mrp": 90,
       "id": 11,
-      "inStock": "no",
+      "inStock": true,
       "brand": 7,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Hamdard Roohafza Sharbat Syrup 750 ml",
@@ -174,13 +175,13 @@ const Context = ({ children }) => {
       "cost": 135,
       "mrp": 150,
       "id": 12,
-      "inStock": "no",
+      "inStock": true,
       "brand": 25,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Mirinda Orange 2.25 L",
@@ -189,13 +190,13 @@ const Context = ({ children }) => {
       "cost": 60,
       "mrp": 90,
       "id": 13,
-      "inStock": "no",
+      "inStock": true,
       "brand": 21,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "7Up 2 L",
@@ -204,13 +205,13 @@ const Context = ({ children }) => {
       "cost": 63,
       "mrp": 90,
       "id": 14,
-      "inStock": "no",
+      "inStock": true,
       "brand": 16,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "7 Up 750 ml",
@@ -219,13 +220,13 @@ const Context = ({ children }) => {
       "cost": 32,
       "mrp": 40,
       "id": 15,
-      "inStock": "no",
+      "inStock": true,
       "brand": 16,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Pepsi 750 ml",
@@ -234,13 +235,13 @@ const Context = ({ children }) => {
       "cost": 32,
       "mrp": 40,
       "id": 16,
-      "inStock": "no",
+      "inStock": true,
       "brand": 7,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Rasna Insta Orange Instant Drink Powder 750 g (Pouch)",
@@ -249,13 +250,13 @@ const Context = ({ children }) => {
       "cost": 120,
       "mrp": 240,
       "id": 17,
-      "inStock": "no",
+      "inStock": true,
       "brand": 23,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Red Bull Energy Drink 250 ml (Can)",
@@ -264,13 +265,13 @@ const Context = ({ children }) => {
       "cost": 103,
       "mrp": 115,
       "id": 18,
-      "inStock": "no",
+      "inStock": true,
       "brand": 24,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Tang Orange Instant Drink Mix 500 g",
@@ -279,13 +280,13 @@ const Context = ({ children }) => {
       "cost": 115.55,
       "mrp": 135,
       "id": 19,
-      "inStock": "no",
+      "inStock": true,
       "brand": 3,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "Pepsi 250 ml (Can)",
@@ -294,13 +295,13 @@ const Context = ({ children }) => {
       "cost": 22,
       "mrp": 30,
       "id": 20,
-      "inStock": "no",
+      "inStock": true,
       "brand": 7,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
     {
       "title": "7 Up 250 ml (Can)",
@@ -309,13 +310,13 @@ const Context = ({ children }) => {
       "cost": 22,
       "mrp": 30,
       "id": 21,
-      "inStock": "yes",
+      "inStock": false,
       "brand": 16,
       "cat": "energy-soft-drinks",
       "mainCat": "beverages",
       "originCountry": "India",
-      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapien non convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
-      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare non mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
+      "description": "Vivamus ultricies, augue ac viverra suscipit, justo eros iaculis ex, sed lacinia odio nunc a arcu. Donec enim odio, pulvinar a efficitur vitae, tincidunt sit amet libero. Quisque faucibus sed lectus id congue. Suspendisse facilisis sollicitudin faucibus. Integer dapibus, justo a semper dignissim, massa risus feugiat augue, quis cursus nulla lectus bibendum orci. Nullam dignissim, sapientrue convallis mollis, lectus lectus dignissim eros, a mollis dui diam quis est. Etiam tempor ut sem a egestas.",
+      "feature": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornaretrue mauris eu dictum. Ut tempus urna a ornare porta. Cras rhoncus mattis massa quis tristique."
     },
   ]
   const products = data.map((el) => ({
@@ -325,12 +326,29 @@ const Context = ({ children }) => {
     image: el.image,
     inStock: el.inStock,
   }));
-  console.log(products);
+
+  const [state, dispatch] = useReducer(cartReducer, {
+    products: products,
+    cart: [],
+  });
+
+  const [productState, productDispatch] = useReducer(productReducer, {
+    byStock: false,
+    byFastDelivery: false,
+    byRating: 0,
+    searchQuery: "",
+  });
+
+  console.log(productState);
+
   return (
-    <Cart.Provider>
+    <Cart.Provider value={{ state, dispatch }}>
       {children}
     </Cart.Provider>
   );
 };
-
 export default Context;
+
+export const CartState = () => {
+  return useContext(Cart);
+};

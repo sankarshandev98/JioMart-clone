@@ -31,7 +31,7 @@ export default function SliderEight() {
         <div className="slidertwo">
             <Slider {...settings}>
                 {Categories.map((el) => (<div>
-                    <Link to={el[1]}>
+                    <Link to="/products-page">
                         <img style={{ width: "87%", margin: "0", height: "auto" }} src={el[0]} alt="" className="smallcardfour" />
                     </Link>
                 </div>))}

@@ -14,6 +14,7 @@ import Slidersix from './Slidersix'
 import SliderSeven from './Sliderseven'
 import SliderEight from './Slidereight'
 import SliderNine from './Slidernine'
+import { Link } from 'react-router-dom'
 
 
 function LandingPage() {
