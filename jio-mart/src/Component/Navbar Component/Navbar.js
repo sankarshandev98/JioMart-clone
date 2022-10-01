@@ -8,7 +8,6 @@ import Login_signup from './Login_signup';
 import Cart from './Cart';
 import "./Nav.css";
 import SidebarLogin from './SidebarLogin';
-import Nav from "../Dropdown Component/Nav";
 
 const Navbar = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -26,7 +25,6 @@ const Navbar = () => {
                 <Login_signup />
                 <Cart />
             </div>
-            <Nav />
             <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                 <ul className={styles.nav_menu_items} onClick={showSidebar}>
                     <SidebarLogin />
