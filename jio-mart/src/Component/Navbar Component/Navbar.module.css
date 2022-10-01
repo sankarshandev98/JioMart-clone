@@ -19,20 +19,6 @@
   justify-content: center;
   align-items: center;
 }
-.nav_menu_items {
-  width: 100%;
-  margin-top: -0px;
-}
-
-.navbar_toggle {
-  background-color: #008ecc;
-  width: 115%;
-  height: 90px;
-  display: flex;
-  margin-left: -40px;
-  margin-bottom: 15px;
-}
-
 .main_logo {
   width: 118px;
   height: 118px;
@@ -56,37 +42,7 @@
 .outline_logo {
   color: white;
 }
-.aiHello {
-  width: 48%;
-  height: 35px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 17px;
-  color: white;
-  margin-left: 5px;
-  margin-top: 2px;
-}
-.userCircle {
-  width: 25px;
-  height: 25px;
-}
-.sidebar_buttons {
-  width: 300px;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: -16px;
-  margin-top: 5px;
-}
-.sidebar_buttons > button {
-  width: 147px;
-  background: transparent;
-  height: 30px;
-  border: 1px solid white;
-  color: white;
-}
+
 .search_div {
   width: 56%;
   height: 40px;
