@@ -1,10 +1,17 @@
-  .slick-slider{
-    width: 95%;
-    margin: auto;
-  }
-.sliderthree{
+.slick-slider {
+  width: 95%;
+  margin: auto;
+}
+.sliderthree {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.smallcardfour {
+  transition: transform 0.2s;
+}
+
+.smallcardfour:hover {
+  transform: scale(1.05);
 }
