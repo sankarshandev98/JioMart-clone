@@ -11,6 +11,9 @@ import WomenCard from './WomenCard'
 import Sliderfour from './Sliderfour'
 import Sliderfive from './Sliderfive'
 import Slidersix from './Slidersix'
+import SliderSeven from './Sliderseven'
+import SliderEight from './Slidereight'
+import SliderNine from './Slidernine'
 
 
 function LandingPage() {
@@ -181,8 +184,36 @@ function LandingPage() {
                 <div className={style.offer}> <a href=""><img style={{ width: "100%" }} src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1607437940_buybig_webmini.jpg" alt="" /></a> </div>
                 <div className={style.offer}> <a href=""><img style={{ width: "100%" }} src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1623848340_wm.jpg" alt="" /></a> </div>
             </div>
+            <p className="heardertext" style={{ marginLeft: "5%", padding: "20px 16px 1px 4px", fontSize: "22px", color: "#000", fontFamily: "Arial", fontWeight: "bold" }}>Smartphones For Every Budget</p>
+            <div style={{ width: "100%", margin: "15px auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664544343_Flagship_Smartphones.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664544343_Below_9999.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664544350_10k-29k.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664544399_above_30k.jpg"} />
+            </div>
+            <p className="heardertext" style={{ marginLeft: "5%", padding: "20px 16px 1px 4px", fontSize: "22px", color: "#000", fontFamily: "Arial", fontWeight: "bold" }}>Smartphone Accessories</p>
+            <div style={{ width: "100%", margin: "15px auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664544521_Powerbanks.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664450395_Mobile_cables_chargers.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664450433_Mobile_screen_protectors.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664450466_Mobile_case_and_covers.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664450493_Mobile_Holders.jpg"} />
+            </div>
+            <p className="heardertext" style={{ marginLeft: "5%", padding: "20px 16px 1px 4px", fontSize: "22px", color: "#000", fontFamily: "Arial", fontWeight: "bold" }}>Trending Electronics</p>
+            <HomeWrapper> <SliderNine /> </HomeWrapper>
+            <p className="heardertext" style={{ marginLeft: "5%", padding: "20px 16px 1px 4px", fontSize: "22px", color: "#000", fontFamily: "Arial", fontWeight: "bold" }}>Tyohar Ready Deals</p>
+            <HomeWrapper> <SliderEight /> </HomeWrapper>
+            <p className="heardertext" style={{ marginLeft: "5%", padding: "20px 16px 1px 4px", fontSize: "22px", color: "#000", fontFamily: "Arial", fontWeight: "bold" }}>Dhamaka Deals</p>
+            <div style={{ width: "100%", margin: "15px auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018231_1.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018211_2.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018222_3.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018241_4.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018261_5.jpg"} />
+                <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018250_6.jpg"} />
+            </div>
             <p className="heardertext" style={{ marginLeft: "5%", padding: "20px 16px 1px 4px", fontSize: "22px", color: "#000", fontFamily: "Arial", fontWeight: "bold" }}>Fast & Feast</p>
-            <HomeWrapper> <Sliderseven /> </HomeWrapper>
+            <HomeWrapper> <SliderSeven /> </HomeWrapper>
             <p className="heardertext" style={{ marginLeft: "5%", padding: "20px 16px 1px 4px", fontSize: "22px", color: "#000", fontFamily: "Arial", fontWeight: "bold" }}>One Shop For All Your Aarti Needs</p>
             <div style={{ width: "100%", margin: "15px auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
                 <SmallCard url={"https://www.jiomart.com/images/cms/aw_rbslider/slides/1663836100_TRS_Puja-Needs_UI-01.jpg"} />

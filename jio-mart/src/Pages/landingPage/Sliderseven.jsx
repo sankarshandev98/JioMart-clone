@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom"
 
-export default function Sliderseven() {
+export default function SliderSeven() {
     var settings = {
         dots: false,
         infinite: false,
@@ -15,13 +15,15 @@ export default function Sliderseven() {
     };
 
     let Categories = [
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839171_1.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839328_2.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663849445_Desktop_Carousel_3.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839419_5.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839522_7.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839563_8.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839609_9.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018779_1.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018787_2.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018796_3.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018818_4.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018826_5.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018834_6.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018875_7.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018883_8.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664018892_9.jpg"],
     ]
     return (
         <div className="slidertwo">

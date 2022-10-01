@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom"
 
-export default function Slidereight() {
+export default function SliderEight() {
     var settings = {
         dots: false,
         infinite: false,
@@ -15,13 +15,17 @@ export default function Slidereight() {
     };
 
     let Categories = [
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839171_1.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839328_2.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663849445_Desktop_Carousel_3.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839419_5.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839522_7.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839563_8.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839609_9.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664454106_Smartphone.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664544585_Audio_Gears.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664544634_Kitchen_Appiances.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664454206_Rice_Combo.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664454216_Detergents.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664454234_Soad__Shampoos.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664454250_Biscutes__Coockies.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664454267_Beverages_Drinks.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664454289_Hygiene_Health_Prsonal_Care.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664454370_Beauty.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664454388_Clothing___Footware_Accessories.jpg"],
     ]
     return (
         <div className="slidertwo">

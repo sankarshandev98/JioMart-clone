@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom"
 
-export default function Slidernine() {
+export default function SliderNine() {
     var settings = {
         dots: false,
         infinite: false,
@@ -15,13 +15,18 @@ export default function Slidernine() {
     };
 
     let Categories = [
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839171_1.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839328_2.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663849445_Desktop_Carousel_3.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839419_5.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839522_7.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839563_8.jpg"],
-        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1663839609_9.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453089_Home_care_appliances.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453124_Television.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453227_Smartwatches.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453315_Laptops_Accessories.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453360_Audio_Devices.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453406_Grooming_Personal_Care.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453434_Washing_Machine.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453460_Mixer_Grinder.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453489_Refrigerators.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453596_Monitors_Desktops.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453643_Air_Conditioners.jpg"],
+        ["https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453684_Camera_Accessories.jpg"],
     ]
     return (
         <div className="slidertwo">
