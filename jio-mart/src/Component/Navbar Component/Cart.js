@@ -5,7 +5,7 @@ import styles from "./Navbar.module.css";
 function Cart() {
     return (
         <div className={styles.cartDiv}>
-            <faIcons.FaShoppingCart className={styles.cart_img} /><span>Cart</span>
+            <faIcons.FaShoppingCart className={styles.cart_img}/><span>Cart</span>
         </div>
     )
 }
