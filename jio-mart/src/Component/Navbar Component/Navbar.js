@@ -18,10 +18,12 @@ const Navbar = () => {
                 <img className={styles.main_logo} src='https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg' />
                 <Searchbar />
                 <Login_signup />
-                <Button variant="primary">
-                    <faIcons.FaShoppingCart className={styles.cart_img} />
-                    Cart <Badge bg="secondary">9</Badge>
-                </Button>
+                <Link to="/cart">
+                    <Button variant="primary">
+                        <faIcons.FaShoppingCart className={styles.cart_img} />
+                        Cart <Badge bg="secondary">9</Badge>
+                    </Button>
+                </Link>
             </div>
         </>
     )

@@ -1,10 +1,10 @@
 import React from 'react';
 import { createContext ,useState} from 'react';
-export const Context = createContext();
-const ContextProvider = ({ children }) => {
+const Cart = createContext();
+const Context = ({ children }) => {
   const [cartPopUpVisible, setcartPopUpVisible] = useState(false);
   const value = { cartPopUpVisible, setcartPopUpVisible };
-  return <Context.Provider value={value}>{children}</Context.Provider>;
+  return <Cart.Provider value={value}>{children}</Cart.Provider>;
 };
 
-export default ContextProvider;
+export default Context;
