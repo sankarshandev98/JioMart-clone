@@ -1,0 +1,77 @@
+* {
+  font-family: sans-serif;
+}
+.navbar {
+  background-color: #008ecc;
+  margin: auto;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -8px;
+}
+.menu_bars {
+  font-size: 1.5rem;
+  background: none;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_logo {
+  width: 118px;
+  height: 118px;
+}
+.Searchbar {
+  width: 720px;
+  background-color: white;
+  border: transparent;
+  border-radius: 3px;
+  height: 40px;
+}
+.FaListUl {
+  width: 20px;
+  height: 20px;
+}
+.cart_img {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+.outline_logo {
+  color: white;
+}
+
+.search_div {
+  width: 56%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loginDiv {
+  width: 10.5%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+}
+.userLogo {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.userLogo + span {
+  color: white;
+}
+.cartDiv {
+  width: 4.5%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
