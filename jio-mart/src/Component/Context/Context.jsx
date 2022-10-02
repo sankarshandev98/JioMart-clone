@@ -337,16 +337,16 @@ const Context = ({ children }) => {
     searchQuery: "",
   });
 
-  console.log(productState);
 
   return (
-    <Cart.Provider value={{ state, dispatch }}>
+    <Cart.Provider value={{ state, dispatch, productState, productDispatch }}>
       {children}
     </Cart.Provider>
   );
 };
-export default Context;
 
 export const CartState = () => {
   return useContext(Cart);
 };
+
+export default Context;

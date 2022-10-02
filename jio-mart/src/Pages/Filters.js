@@ -3,8 +3,8 @@ import { CartState } from "../Component/Context/Context";
 
 const Filters = () => {
     const {
-        productState: { byStock, sort },
         productDispatch,
+        productState: { byStock, sort },
     } = CartState();
 
     return (

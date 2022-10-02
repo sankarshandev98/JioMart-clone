@@ -31,8 +31,6 @@ const Cart = () => {
                                 </Col>
                                 <Col md={2}>₹ {prod.price}</Col>
                                 <Col md={2}>
-                                </Col>
-                                <Col md={2}>
                                     <Form.Control
                                         as="select"
                                         value={prod.qty}

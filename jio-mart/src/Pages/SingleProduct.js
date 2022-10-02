@@ -16,7 +16,6 @@ const SingleProduct = ({ prod }) => {
                     <Card.Title>{prod.name}</Card.Title>
                     <Card.Subtitle style={{ paddingBottom: 10 }}>
                         <span>MRP: ₹ {prod.price}</span>
-                        {prod.inStock ? (<div>Available</div>) : (<div>Not Available</div>)}
                     </Card.Subtitle>
                     {cart.some((p) => p.id === prod.id) ? (
                         <Button

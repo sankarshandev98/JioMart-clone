@@ -4,7 +4,7 @@ import { CartState } from '../Context/Context';
 import styles from "./Navbar.module.css";
 
 function Searchbar() {
-    const { state: { cart }, dispatch, productDispatch } = CartState();
+    const { state: productDispatch } = CartState();
     return (
         <div className={styles.search_div}>
             <input className={styles.Searchbar}
