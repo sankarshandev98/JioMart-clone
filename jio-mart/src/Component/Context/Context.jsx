@@ -332,14 +332,12 @@ const Context = ({ children }) => {
     cart: [],
   });
 
-  // const [productState, productDispatch] = useReducer(productReducer, {
-  //   byStock: false,
-  //   byFastDelivery: false,
-  //   byRating: 0,
-  //   searchQuery: "",
-  // });
+  const [productState, productDispatch] = useReducer(productReducer, {
+    byStock: false,
+    searchQuery: "",
+  });
 
-  // console.log(productState);
+  console.log(productState);
 
   return (
     <Cart.Provider value={{ state, dispatch }}>
