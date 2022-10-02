@@ -15,11 +15,11 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/products-page" element={<Home />} />
-        <Route path="/checkout-page" element={<Checkout />}></Route>
+        <Route path="/checkout-page" element={<Checkout />} />
       </Routes>
       <Footer1 />
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;

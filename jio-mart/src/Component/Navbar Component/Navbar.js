@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import * as AiIcons from "react-icons/ai";
 import styles from "./Navbar.module.css";
 import Searchbar from "./Searchbar";
-import LoginSignup from "./Login_signup";
 import * as faIcons from "react-icons/fa";
 import { CartState } from "../Context/Context";
 import { Badge, Button, Dropdown, Nav } from "react-bootstrap";
@@ -27,7 +26,7 @@ const Navbar = () => {
           />
         </Link>
         <Searchbar />
-        <faIcons.FaUser className={styles.userLogo} />{" "}
+        <faIcons.FaUser className={styles.userLogo} />
         <span>Sign in / Sign up</span>
         <Nav>
           <Dropdown alignRight>

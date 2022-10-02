@@ -1,13 +1,8 @@
 import React from 'react'
 import Banner from './Banner'
-import Slidertwo from './Slidertwo'
-import Sliderthree from './Sliderthree'
 import Swipper from './Swipper'
-import style from "./LandingPage.module.css"
-import BannerCard from './BannerCard'
 import SmallCard from './SmallCard'
 import { HomeWrapper } from './style'
-import WomenCard from './WomenCard'
 import Sliderfour from './Sliderfour'
 import Sliderfive from './Sliderfive'
 import Slidersix from './Slidersix'

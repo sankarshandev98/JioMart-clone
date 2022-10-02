@@ -64,6 +64,9 @@
   height: 20px;
   color: white;
 }
+.userLogo + span {
+  color: white;
+}
 .cartDiv {
   width: 4.5%;
   height: 20px;
