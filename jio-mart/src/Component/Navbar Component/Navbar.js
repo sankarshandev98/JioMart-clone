@@ -19,12 +19,14 @@ const Navbar = () => {
                 <Link to="/" className={styles.menu_bars}>
                     <AiIcons.AiOutlineMenu className={styles.outline_logo} />
                 </Link>
-                <img className={styles.main_logo} src='https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg' alt="" />
+                <Link to="/">
+                    <img className={styles.main_logo} src='https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg' alt="" />
+                </Link>
                 <Searchbar />
                 <LoginSignup />
                 <Nav>
                     <Dropdown alignRight>
-                        <Dropdown.Toggle variant="success">
+                        <Dropdown.Toggle>
                             <faIcons.FaShoppingCart color="white" fontSize="25px" />
                             <Badge>{cart.length}</Badge>
                         </Dropdown.Toggle>

@@ -1,9 +1,20 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import { CartState } from "../Component/Context/Context";
 import Filters from "./Filters";
 import SingleProduct from "./SingleProduct";
 import "./styles.css";
+import RingLoader from "react-spinners/RingLoader";
 
 const Home = () => {
+
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000)
+    }, [])
     const {
         state: { products },
         productState: { sort, byStock, searchQuery },
@@ -18,7 +29,7 @@ const Home = () => {
             );
         }
 
-        if (!byStock) {
+        if (byStock) {
             sortedProducts = sortedProducts.filter((prod) => prod.inStock);
         }
 
@@ -33,12 +44,21 @@ const Home = () => {
     };
     return (
         <div className="home">
-            <Filters />
-            <div className="productContainer">
-                {transformProducts().map((prod) => (
-                    <SingleProduct prod={prod} key={prod.id} />
-                ))}
-            </div>
+            {loading ? (
+                <RingLoader className="spin"
+                    color={"#008ECC"} loading={loading} size={150} />
+            )
+                : (
+                    <>
+                        <Filters />
+                        <div className="productContainer">
+                            {transformProducts().map((prod) => (
+                                <SingleProduct prod={prod} key={prod.id} />
+                            ))}
+                        </div>
+                    </>
+                )
+            }
         </div>
     );
 };
