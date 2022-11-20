@@ -72,3 +72,19 @@
 .spin {
   margin: auto;
 }
+
+@media all and (min-width: 320px) and (max-width: 767px){
+  .title{
+    font-size: 10px;
+  }
+  .productContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2,1fr;
+    grid-template-rows: ;
+
+
+  }
+}
+
+
