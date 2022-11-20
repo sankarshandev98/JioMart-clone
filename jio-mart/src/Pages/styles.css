@@ -78,9 +78,8 @@
     font-size: 10px;
   }
   .productContainer {
-    width: 100%;
     display: grid;
     grid-template-columns: 2, 1fr;
-    grid-template-rows: 100px, 100px;
+    grid-template-rows: auto;
   }
 }

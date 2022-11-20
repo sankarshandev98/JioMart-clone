@@ -14,6 +14,7 @@ const Home = () => {
       setLoading(false);
     }, 2000);
   }, []);
+  
   const {
     state: { products },
     productState: { sort, byStock, searchQuery },
