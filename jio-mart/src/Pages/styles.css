@@ -73,18 +73,14 @@
   margin: auto;
 }
 
-@media all and (min-width: 320px) and (max-width: 767px){
-  .title{
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .title {
     font-size: 10px;
   }
-  .productContainer{
+  .productContainer {
     width: 100%;
     display: grid;
-    grid-template-columns: 2,1fr;
-    grid-template-rows: ;
-
-
+    grid-template-columns: 2, 1fr;
+    grid-template-rows: 100px, 100px;
   }
 }
-
-
