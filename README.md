@@ -17,7 +17,7 @@
 
 ### Screenshots
 
-<img src="https://sankarshandev98.github.io/static/media/3.de3de18d2392d325e78a.PNG" alt="1"/>
+<img src="https://nationalviews.com/wp-content/uploads/2020/07/jiomart-review-2.jpg" alt="1"/>
 
 
 #### Features
